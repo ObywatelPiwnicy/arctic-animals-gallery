@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Meta tagi -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+    <!-- Opis strony dla SEO -->
+    <meta name="description" content="Krótki opis strony, który będzie wyświetlany w wynikach wyszukiwania.">
+ 
+    <!-- Tytuł strony -->
+    <title>galeria z flexbox</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Linki do arkuszy stylów CSS -->
+    <link rel="stylesheet" href="css/style.css">
+   
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+ 
+ 
+    <!-- Open Graph dla lepszego udostępniania na platformach social media -->
+    <meta property="og:title" content="Nazwa Twojej Strony">
+    <meta property="og:description" content="Opis strony, wyświetlany podczas udostępniania strony na platformach social media.">
+    <meta property="og:image" content="link-do-obrazka.jpg">
+    <meta property="og:url" content="https://twojastrona.com">
+    <meta property="og:type" content="website">
+
+    <!--import FontAwesome -->
+ 
+    
+    <!-- Skrypty JavaScript -->
+    <!-- Najlepiej umieścić skrypty na końcu body, ale czasami mogą być wymagane w head -->
+    <!--<script src="js/skrypt.js"></script>-->
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;300;400;700&display=swap');
+
+        body{
+           display: flex;
+           flex-direction: column;
+           min-height: 100vh;
+        }
+
+        h1{
+            flex-basis: 10vh;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 10vh;
+            font-family: 'Saira Condensed', sans-serif;
+            /* font-weight: 300; */
+            font-size: 9vh;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        section{
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-around;
+            
+            /* margin-top: 2vh; */
+        }
+
+        section div{
+            text-align: center;
+            width: 35vw;
+            flex-basis: 21%;
+            height: 25vw;
+            font-size: 0;
+            margin-top: 2vh;
+            transition: 0.3s;
+        }
+
+        section div img{
+            width: 100%;
+            height: 85%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        section div h2{
+            height: 15%;
+            background-color: black;
+            color: white;
+            /* display: block; */
+            font-size: 1.6vw;
+            line-height: calc(25vw*0.15);
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: "saira", sans-serif;
+        }
+
+        footer{
+            display: block;
+            text-align: center;
+            background-color: royalblue;
+            color: white;
+            font-size: 3.2w;
+            font-family: "saira condensed", sans-serif;
+            font-weight: 200;
+        }
+
+        /* section div:hover img{
+            transform: scale(1.2);
+        } */
+
+        @media (max-width: 1280px){
+            section div{
+                flex-basis: 45%;
+                padding: 10px;
+                height: 30vw;
+            }
+            h1{
+                font-size: 9.2vh;
+                letter-spacing: 3px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            section div{
+                flex-basis: 97%;
+                padding: 1%;
+                height: 67vw;
+            }
+
+            section div h2{
+                font-size: 4.5vw;
+            }
+        }
+
+        @media (max-width: 680px) and (orientation: landscape) {
+            h1{
+                font-size: 9.2vh;
+                letter-spacing: 3px;
+            }
+
+            section div{
+                flex-basis: 97%;
+                padding: 1%;
+                height: 92vh;
+            }
+        }
+   
+    </style>
+
+</head>
+<body>
+  
+    <h1>Zwierzęta Arktyki</h1>
+  
+    <section>
+
+        <div>
+            <img src="img/zwierzęta arktyczne/elephant-seal-g4ef1c1cd2_1280.jpg" alt="">
+            <h2>Słoń morski</h2>
+        </div>
+        <div>
+            <img src="img/zwierzęta arktyczne/icebear-gc03243aed_1280.jpg" alt="">
+            <h2>Niedźwiedź polarny</h2>
+        </div>
+        <div>
+            <img src="img/zwierzęta arktyczne/muskox-g19313a9d4_1280.jpg" alt="">
+            <h2>Wół piżmowy</h2>
+        </div>
+        <div>
+            <img src="img/zwierzęta arktyczne/puffin-gc23346a6b_1920.jpg" alt="">
+            <h2>Maskonur</h2>
+        </div>
+        <div>
+            <img src="img/zwierzęta arktyczne/rabbit-g8d175fe19_1280.jpg" alt="">
+            <h2>Zając bielak</h2>
+        </div>
+        <div>
+            <img src="img/zwierzęta arktyczne/reindeer-g7ac4e883e_1280.jpg" alt="">
+            <h2>Renifer</h2>
+        </div>
+        <div>
+            <img src="img/zwierzęta arktyczne/snowy-owl-g235263ef1_1280.jpg" alt="">
+            <h2>Puchacz śnieżny</h2>
+        </div>
+        <div>
+            <img src="img/zwierzęta arktyczne/white-g9ef997665_1280.jpg" alt="">
+            <h2>Lis polarny</h2>
+        </div>
+    </section>
+
+    <footer>
+        &copy;Dawid aka ObywatelPiwnicy, 2023
+    </footer>
+ 
+ 
+</body>
+</html>
+ 

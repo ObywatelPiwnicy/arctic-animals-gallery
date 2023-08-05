@@ -1,0 +1,40 @@
+  /* ************ RESET ************/
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    animation-timing-function: linear;
+    object-fit: cover;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* :root{
+ 
+  } */
+
+  .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body{
+    /* background-color: blueviolet; */
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+    /* ************ KONIEC RESETU ************/
